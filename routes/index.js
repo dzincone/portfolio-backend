@@ -8,5 +8,11 @@ router.get('/', function(req, res, next) {
 
 router.post('/api/email', function(req, res, next){
   console.log(req.body);
+
+  $.get('https://api.sendgrid.com/api/blocks.get.json?api_user='+process.env.SENDGRID_USER+'&api_key='+process.env.SENDGRID_KEY, function(){
+
+  })
 })
+
+
 module.exports = router;
